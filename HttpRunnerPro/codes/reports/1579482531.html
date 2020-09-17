@@ -1,0 +1,1710 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2020-01-20 09:08:51</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">1.118 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.3.0 </td>
+      <td>CPython 3.7.4 </td>
+      <td colspan="2">Windows-10-10.0.14393-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">5 (5/0)</td>
+      <td colspan="2">5 (5/0/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>登录接口测试</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">正常登录</td>
+      <td style="text-align:center;width:6em;">595.58 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 正常登录</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.keyou.site:8000/user/login/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: danshui2
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 44
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;username&#34;: &#34;keyou1&#34;, &#34;password&#34;: &#34;123456&#34;}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.keyou.site:8000/user/login/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 20 Jan 2020 01:08:51 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 227
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept, Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Allow</strong>: POST, OPTIONS
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;token&#39;: &#39;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3OTU2ODkzMSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.Kx4zOYtyVxVE3grsnlVkDCEL5v8OSCv9JMyb1iuSqSI&#39;, &#39;user_id&#39;: 2, &#39;username&#39;: &#39;keyou1&#39;}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($status_code)</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json</td>
+                      <td>application/json</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content
+                      </td>
+                      <td>contains</td>
+                      <td>LazyString($contain_msg)</td>
+                      <td>{&#39;token&#39;: &#39;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3OTU2ODkzMSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.Kx4zOYtyVxVE3grsnlVkDCEL5v8OSCv9JMyb1iuSqSI&#39;, &#39;user_id&#39;: 2, &#39;username&#39;: &#39;keyou1&#39;}</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>227</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>595.58</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>476.481</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+  
+  <h3>登录接口测试</h3>
+  <table id="suite_2" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_2_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">账号错误</td>
+      <td style="text-align:center;width:6em;">185.46 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_2_1_1">log-1</a>
+        <div id="popup_log_2_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_2_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 账号错误</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.keyou.site:8000/user/login/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: danshui1
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 47
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;username&#34;: &#34;keyou1111&#34;, &#34;password&#34;: &#34;123456&#34;}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            False
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.keyou.site:8000/user/login/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            400
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            Bad Request
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 20 Jan 2020 01:08:51 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 67
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept, Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Allow</strong>: POST, OPTIONS
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;non_field_errors&#39;: [&#39;无法使用提供的认证信息登录。&#39;]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($status_code)</td>
+                      <td>400</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json</td>
+                      <td>application/json</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content
+                      </td>
+                      <td>contains</td>
+                      <td>LazyString($contain_msg)</td>
+                      <td>{&#39;non_field_errors&#39;: [&#39;无法使用提供的认证信息登录。&#39;]}</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>67</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>185.46</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>181.426</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+  
+  <h3>登录接口测试</h3>
+  <table id="suite_3" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_3_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">密码错误</td>
+      <td style="text-align:center;width:6em;">193.49 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_3_1_1">log-1</a>
+        <div id="popup_log_3_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_3_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 密码错误</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.keyou.site:8000/user/login/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: danshui3
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 44
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;username&#34;: &#34;keyou1&#34;, &#34;password&#34;: &#34;123457&#34;}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            False
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.keyou.site:8000/user/login/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            400
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            Bad Request
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 20 Jan 2020 01:08:52 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 67
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept, Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Allow</strong>: POST, OPTIONS
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;non_field_errors&#39;: [&#39;无法使用提供的认证信息登录。&#39;]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($status_code)</td>
+                      <td>400</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json</td>
+                      <td>application/json</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content
+                      </td>
+                      <td>contains</td>
+                      <td>LazyString($contain_msg)</td>
+                      <td>{&#39;non_field_errors&#39;: [&#39;无法使用提供的认证信息登录。&#39;]}</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>67</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>193.49</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>188.988</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+  
+  <h3>登录接口测试</h3>
+  <table id="suite_4" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_4_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">账号为空</td>
+      <td style="text-align:center;width:6em;">61.16 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_4_1_1">log-1</a>
+        <div id="popup_log_4_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_4_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 账号为空</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.keyou.site:8000/user/login/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: danshui1
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 38
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;username&#34;: &#34;&#34;, &#34;password&#34;: &#34;123456&#34;}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            False
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.keyou.site:8000/user/login/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            400
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            Bad Request
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 20 Jan 2020 01:08:52 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 41
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept, Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Allow</strong>: POST, OPTIONS
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;username&#39;: [&#39;该字段不能为空。&#39;]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($status_code)</td>
+                      <td>400</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json</td>
+                      <td>application/json</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content
+                      </td>
+                      <td>contains</td>
+                      <td>LazyString($contain_msg)</td>
+                      <td>{&#39;username&#39;: [&#39;该字段不能为空。&#39;]}</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>41</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>61.16</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>55.794</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+  
+  <h3>登录接口测试</h3>
+  <table id="suite_5" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_5_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">密码为空</td>
+      <td style="text-align:center;width:6em;">65.17 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_5_1_1">log-1</a>
+        <div id="popup_log_5_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_5_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 密码为空</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.keyou.site:8000/user/login/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: danshui1
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 38
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;username&#34;: &#34;keyou1&#34;, &#34;password&#34;: &#34;&#34;}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            False
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.keyou.site:8000/user/login/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            400
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            Bad Request
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 20 Jan 2020 01:08:52 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 41
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept, Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Allow</strong>: POST, OPTIONS
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;password&#39;: [&#39;该字段不能为空。&#39;]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($status_code)</td>
+                      <td>400</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json</td>
+                      <td>application/json</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content
+                      </td>
+                      <td>contains</td>
+                      <td>LazyString($contain_msg)</td>
+                      <td>{&#39;password&#39;: [&#39;该字段不能为空。&#39;]}</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>41</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>65.17</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>61.634</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>

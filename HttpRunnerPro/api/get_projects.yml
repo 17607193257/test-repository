@@ -1,0 +1,16 @@
+name: 获取项目信息接口-正向用例
+base_url: http://api.keyou.site:8000
+variables:
+    token: 24352653456
+request:
+    url: /projects/
+    method: GET
+    headers:
+        User-Agent: ${get_user_agent()}
+        Authorization: "JWT $token"
+    params:
+        page: 1
+        size: 2
+validate:
+    - {"check": "status_code","comparator": "eq","expect": 200}
+

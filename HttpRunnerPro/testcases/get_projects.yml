@@ -1,0 +1,37 @@
+#1.此区域下，定义下面所有测试步骤的全局配置信息
+config:
+    name: "获取项目列表信息接口测试"
+    variables:
+        username: keyou1
+        password: "123456"
+    base_url: "http://127.0.0.1:5000"
+
+#2.此区域定义所有测试步骤
+teststeps:
+#第一步：先登录
+-
+    name: 正常登陆
+    api: api/login.yml
+    #合并覆盖+就近原则
+    #测试步骤中定义的variables变量>testcases中config下定义的variables>api中定义的variables
+#    variables:
+#        var1: keyou1
+#        var2: "123456"
+    #此区域定义从响应报文中取出数据，定义为变量
+    #可以从设置变量的下方获取：$token
+    extract:
+        - token: content.token
+    #断言：合并覆盖+就近原则
+    #一般情况下，api中定义基础的断言，testcases中定义较为复杂的断言
+    validate:
+        - eq: ["status_code", 200]
+#第二步：获取项目列表信息
+-
+    name: 获取项目列表信息
+    api: api/get_projects.yml
+    validate:
+        - {"check":content.count,"comparator":"lt","expect":20}
+        #校验返回结果的results列表中第一个元素的name值
+        - {"check":content.results.0.name,"comparator":"contains","expect":"自动化测试"}
+
+

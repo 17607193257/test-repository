@@ -1,0 +1,55 @@
+#所有的用例以及用例数据都存放在yaml或者json格式配置文件中
+#name区域：定义接口名称
+name: 登录接口-正向用例
+
+#base_url区域：定义base_url
+base_url: http://api.keyou.site:8000
+
+#variables区域：来创建全局变量
+variables:
+    var1: keyou1
+    var2: "123456"
+    port: "8000"
+    username: keyou100
+    password: "123456"
+
+#request区域：定义请求信息
+request:
+    #接口url地址
+    url: /user/login/
+    #请求方法，不区分大小写
+    method: POST
+    #指定请求投信息
+    headers:
+        Content-Type: "application/json"
+        #${函数名（参数1，参数2，。。。。）}
+        User-Agent: ${get_user_agent()}
+    json:
+#        username: "keyou1"
+#        password: 123456
+        #2.${ENV(变量名)}
+#        username: ${ENV(USERNAME)}
+#        password: ${ENV(PASSWORD)}
+        #3.$变量名，调用variables区域下的全局变量（能在variables区域下的所有地方来调用）
+        username: $username
+        password: $password
+#    data:
+#        username: "keyou1"
+#        password: 123456
+#    params:
+#        username: "keyou1"
+#        age: 17
+
+#设置断言
+validate:
+    #a.eq：指定断言类型，断言相等，还可使用"equals","==","is"
+    #lt:断言小于，less_than
+    #le gt ge ne:小于等于，大于，大于等于，不等于
+    #contains：包含断言
+    #b.列表中第一个值为实际值
+    # status_code, cookies, elapsed, headers, content, text, json, encoding, ok, reason, url.
+    #c.列表中第二个参数为期望值
+#    - eq: ["status_code", 200]
+    - {"check": "status_code","comparator": "eq","expect": 201}
+    - {"check": "headers.Content-Type","comparator":"eq","expect":"application/json"}
+#    - {"check": "content.username","comparator":"contains","expect":"you"}

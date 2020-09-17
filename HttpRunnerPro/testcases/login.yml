@@ -1,0 +1,18 @@
+#1.此区域下，定义下面所有测试步骤的全局配置信息
+config:
+    name: "登录接口测试"
+    base_url: "http://127.0.0.1:5000"
+
+#2.此区域定义所有测试步骤
+teststeps:
+-
+    name: $title
+    api: api/login.yml
+    #api中定义基础的断言，testcases中定义较为复杂的断言
+    validate:
+        - {"check": "status_code","comparator": "eq","expect": $status_code}
+        #content是一个字典，用contains方法进行校验是对字典的key进行校验
+        - {"check": "content","comparator":"contains","expect":"$contain_msg"}
+
+
+

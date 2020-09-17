@@ -1,0 +1,33 @@
+#此区域添加多个用例之间的全局配置信息
+config:
+    name: "接口测试套件"
+    variables:
+        device_sn: "XYZ"
+    base_url: "http://api.keyou.site:8000"
+
+#此区域加载用例，进行数据驱动测试
+testcases:
+-
+    name: 登录接口测试
+    testcase: testcases/login.yml
+    #数据驱动
+    parameters:
+        #方式一：
+        #每条用例拥有一组变量
+        #1.多个具有关联性的参数需要将其定义在一期，采用横线(-)
+        #参数1-参数2-参数3
+        #[值1，值2，值3]
+#        - title-username-password-status_code-contain_msg:
+#              - ["正常登录","keyou1","123456",200,"token"]
+#              - ["密码错误","keyou1","123457",400,"non_field_errors"]
+#              - ["账号错误","keyouaaaa","123456",400,"non_field_errors"]
+#              - ["账号为空","","123456",400,"username"]
+#              - ["密码为空","keyou1","",400,"password"]
+
+        #方式二：从CVS文件中获取测试数据
+        #此方法的弊端：从CVS文件中读取出来的数据都是字符串类型的
+#        - title-username-password-status_code-contain_msg: ${P(datas/accounts.txt)}
+
+        #方式三：
+        - title-username-password-status_code-contain_msg: ${get_accounts()}
+
